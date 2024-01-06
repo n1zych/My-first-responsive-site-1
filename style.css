@@ -1,0 +1,620 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul,
+ol {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(/new-project-img/fonts/Poppins-SemiBold.ttf) format("ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(/new-project-img/fonts/Poppins-Bold.ttf) format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+button {
+  border: none;
+}
+
+:root {
+  --color-light: #fff;
+  --color-gray: #b7b7b7;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  gap: 50px;
+}
+.menu-list ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+}
+.menu-list ul li a {
+  color: var(--color-light);
+  font-size: 15px;
+}
+.menu-list ul li a:hover {
+  border-bottom: 2px solid var(--color-light);
+}
+.lenght ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.lenght ul li a:hover {
+  border-bottom: 2px solid var(--color-light);
+}
+.passive-lenght {
+  color: var(--color-gray);
+  text-decoration: none;
+}
+.active-lenght {
+  color: var(--color-light);
+  text-decoration: none;
+}
+.underline-item {
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-light);
+}
+
+.header {
+  background-image: url(road-g9875459d1_1920\ 1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.intro h1 {
+  padding-top: 153px;
+  color: var(--color-light);
+  font-size: 2.25em;
+  max-width: 50%;
+}
+.intro button {
+  background: #db2512;
+  padding: 12px 48px;
+  color: var(--color-light);
+  margin-top: 53px;
+  margin-bottom: 270px;
+  transition: 0.2s;
+}
+.intro button:hover {
+  background: #7a0111;
+}
+
+.menu-info {
+  margin-top: -100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 21px;
+}
+.card-items-info {
+  background: var(--color-light);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+  padding: 39px;
+}
+.card-items-info h3 {
+  padding: 21px 0px;
+  font-weight: 700;
+}
+.card-items-info p {
+  color: var(--color-gray);
+}
+
+.name-servise {
+  margin-top: 99px;
+}
+.name-servise a {
+  margin-top: 15px;
+  font-weight: 300;
+  text-decoration: underline;
+  color: #000;
+  font-size: 15px;
+}
+.name-servise h1 {
+  font-size: 32px;
+}
+.our-menu {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 21px;
+}
+.our-items p {
+  margin-top: 21px;
+  font-size: 20px;
+}
+.our-items img {
+  width: 100%;
+  height: 80%;
+}
+
+.active-card {
+  position: relative;
+}
+.plus-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 40px;
+  font-size: 25px;
+  color: var(--color-light);
+  background-color: red;
+  border-radius: 50%;
+  top: 35%;
+  left: 38%;
+  width: 22%;
+  height: 16%;
+  cursor: pointer;
+}
+.active-card::before {
+  position: absolute;
+  content: "ANNUAL CHECKUPS FROM YOUR PHYSICIAN KEEP YOU IN GOOD HEALTH";
+  color: #fff;
+  font-size: 1.125em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 4.14px;
+  max-width: 75%;
+  padding: 32px 29px;
+  bottom: 20%;
+}
+
+.understand-card-item {
+  background: #000;
+}
+.understand-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.text-under h2 {
+  max-width: 490px;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 4.5px;
+}
+.text-under p {
+  max-width: 506px;
+  color: #b7b7b7;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 3.45px;
+  margin-top: 42px;
+  padding-bottom: 48px;
+}
+.text-under {
+  margin: 117px 0px;
+}
+.imges-under {
+  width: 513px;
+}
+.text-under a {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 2.7px;
+  text-decoration-line: underline;
+}
+.fast-content {
+  padding: 100px 0px;
+}
+.title-section h1 {
+  text-align: center;
+  color: #000;
+  font-size: 148px;
+  font-weight: 900;
+  line-height: 150%;
+}
+.title-section h2 {
+  text-align: center;
+  color: #000;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 6px;
+}
+.menu-info-foot {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.card-items-work {
+  background: var(--color-light);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+}
+.card-items-work h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 2.7px;
+}
+.card-items-work p {
+  color: var(--color-gray);
+  max-width: 332px;
+  padding-top: 15px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.register {
+  background: #000;
+}
+.register-menu {
+  padding: 97px 0;
+}
+.register-menu h1 {
+  color: var(--color-light);
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 4.5px;
+  padding-bottom: 46px;
+}
+.register-menu input {
+  background: #000;
+  padding: 20px 0px 10px 0px;
+  border: 0;
+  border-bottom: 2px solid #b7b7b7;
+  color: var(--color-light);
+}
+.input-left {
+  padding-bottom: 10px;
+  display: flex;
+  gap: 46px;
+  flex-wrap: wrap;
+}
+.input-right {
+  display: flex;
+  gap: 46px;
+  flex-wrap: wrap;
+}
+.register-menu textarea {
+  margin-top: 50px;
+  background: #000;
+  width: 480px;
+  height: 150px;
+  resize: none;
+  border: none;
+  border-bottom: 2px solid var(--color-gray);
+  color: var(--color-light);
+}
+.register-menu button {
+  background: #db2512;
+  padding: 12px 76px;
+  color: var(--color-light);
+  margin-top: 53px;
+  transition: 0.2s;
+}
+.register-menu button:hover {
+  background: #7a0111;
+}
+
+.private-foot {
+  display: flex;
+  justify-content: space-between;
+  padding: 63px 0;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.private-foot h3 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 2.25px;
+}
+.social-networks {
+  display: flex;
+  justify-content: space-between;
+  gap: 21px;
+}
+@media (max-width: 1160px) {
+  .our-menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .end-item {
+    margin-top: -70px;
+  }
+  .text-under {
+    margin: 60px 0px;
+  }
+  .title-section h1 {
+    font-size: 100px;
+  }
+  .title-section h2 {
+    font-size: 40px;
+    font-weight: 500;
+  }
+}
+@media (max-width: 980px) {
+  .fast-content {
+    padding: 50px 0px;
+  }
+}
+@media (max-width: 785px) {
+  .our-menu {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .our-items {
+    margin-top: -70px;
+  }
+  .name-servise {
+    margin-top: 40px;
+    padding-bottom: 30px;
+  }
+  .understand-card-item {
+    margin-bottom: 100px;
+  }
+  .understand-card {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .imges-under {
+    margin-bottom: 60px;
+  }
+  .understand-card {
+    gap: 0px;
+  }
+  .understand-card-item {
+    margin-top: -100px;
+  }
+  .menu-info-foot {
+    margin-top: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .fast-content {
+    margin-top: -100px;
+  }
+}
+@media (max-width: 718px) {
+  .menu-list ul {
+    gap: 15px;
+  }
+  .menu-list ul li a {
+    font-size: 12px;
+  }
+  .logo img {
+    width: 70%;
+  }
+  .intro button {
+    margin-bottom: 100px;
+  }
+  .menu-info {
+    margin-top: -50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 11px;
+  }
+  .card-items-info {
+    padding: 20px;
+  }
+  .card-items-info h3 {
+    font-size: 18px;
+    padding: 11px 0px;
+  }
+  .text-under {
+    margin: 60px 0px;
+  }
+  .title-section h1 {
+    font-size: 50px;
+  }
+  .title-section h2 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .fast-content {
+    margin-top: -140px;
+  }
+  .card-items-work {
+    padding: 10px;
+  }
+  .register-menu {
+    padding: 48px 0;
+  }
+  .private-foot {
+    padding: 30px 0;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 601px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .menu-list {
+    order: 1;
+    margin-top: -50px;
+  }
+  .intro h1 {
+    padding-top: 30px;
+    font-size: 1.5em;
+    max-width: 80%;
+  }
+  .intro button {
+    padding: 6px 20px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+  .understand-card-item {
+    margin-top: -50px;
+  }
+  .text-under h2 {
+    max-width: 490px;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .text-under p {
+    font-size: 15px;
+    margin-top: 22px;
+    padding-bottom: 28px;
+  }
+  .menu-info-foot {
+    margin-top: 30px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 518px) {
+  .register-menu textarea {
+    margin-top: 35px;
+    width: 220px;
+    height: 100px;
+  }
+}
+@media (max-width: 400px) {
+  .menu-info {
+    margin-top: -50px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 11px;
+  }
+  .card-items-info {
+    padding: 10px;
+  }
+  .active-card::before {
+    visibility: hidden;
+  }
+  .our-items {
+    margin-top: -40px;
+  }
+  .name-servise {
+    margin-top: 30px;
+    padding-bottom: 0px;
+    font-size: 30px;
+  }
+  .understand-card-item {
+    margin-top: -20px;
+  }
+  .text-under h2 {
+    max-width: 490px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .text-under p {
+    font-size: 12px;
+    margin-top: 15px;
+    padding-bottom: 18px;
+  }
+  .text-under {
+    margin: 20px 0px;
+  }
+  .title-section h1 {
+    font-size: 40px;
+  }
+  .title-section h2 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
